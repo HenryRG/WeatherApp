@@ -1,0 +1,85 @@
+@import "colors";
+
+.box.active .weather_part{
+    display: flex;
+}
+.weather_part{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        width: 80px;
+        height: 80px;
+        margin-top: 20px;
+    }
+    .temp{
+        font-size: 2.5rem;
+        font-weight: bold;
+        // margin-block: 10px;
+    }
+    .degree{
+        margin-left: -10px;
+    }
+    .weather{
+        margin-bottom: 10px;
+        font-weight: lighter;
+        font-size: 14px;
+        text-transform: capitalize;
+    }
+    .location{
+        margin-bottom: 16px;
+        font-size: 14px;
+
+        i {
+            font-size: 20px;
+            color: $red;
+        }
+    }
+    .bottom_details{
+        background-color: $white;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        border: 1px solid $primary-color;
+
+        .column{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        
+
+            i {
+                font-size: 20px;
+                margin: 5px;
+                color: $primary-color;
+            }
+        }
+        .column.humidity{
+            border-left: 1px solid $primary-color;
+
+        }
+        .details{
+            display: grid;
+            place-items: center;
+
+            .num, .temp { 
+                font-size: 14px; 
+            }
+            .numb, .numb_2 {
+                font-weight: bold;
+                margin-left: -19px;
+                margin-right: -5px;
+            }
+            p{
+                font-size: 12px;
+            }
+            .degree{ 
+                margin: 1px;
+            }
+        }
+    }
+    
+}

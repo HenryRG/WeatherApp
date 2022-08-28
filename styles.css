@@ -1,0 +1,179 @@
+.box.active .weather_part {
+  display: flex;
+}
+
+.weather_part {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.weather_part img {
+  width: 80px;
+  height: 80px;
+  margin-top: 20px;
+}
+.weather_part .temp {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.weather_part .degree {
+  margin-left: -10px;
+}
+.weather_part .weather {
+  margin-bottom: 10px;
+  font-weight: lighter;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.weather_part .location {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+.weather_part .location i {
+  font-size: 20px;
+  color: rgb(207, 4, 4);
+}
+.weather_part .bottom_details {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  border: 1px solid #3bdd25;
+}
+.weather_part .bottom_details .column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.weather_part .bottom_details .column i {
+  font-size: 20px;
+  margin: 5px;
+  color: #3bdd25;
+}
+.weather_part .bottom_details .column.humidity {
+  border-left: 1px solid #3bdd25;
+}
+.weather_part .bottom_details .details {
+  display: grid;
+  place-items: center;
+}
+.weather_part .bottom_details .details .num, .weather_part .bottom_details .details .temp {
+  font-size: 14px;
+}
+.weather_part .bottom_details .details .numb, .weather_part .bottom_details .details .numb_2 {
+  font-weight: bold;
+  margin-left: -19px;
+  margin-right: -5px;
+}
+.weather_part .bottom_details .details p {
+  font-size: 12px;
+}
+.weather_part .bottom_details .details .degree {
+  margin: 1px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #3bdd25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.box {
+  background-color: rgb(255, 255, 255);
+  width: 230px;
+  border-radius: 5px;
+  margin: 10%;
+}
+
+.back-app {
+  width: 100%;
+  color: #3bdd25;
+  padding: 10px 8px;
+  border-bottom: 1px solid #add8e6;
+  font-weight: 500;
+  cursor: pointer;
+}
+.back-app i {
+  font-size: 0px;
+}
+
+.box.active .back-app i {
+  font-size: 16px;
+}
+
+.box.active .input_part {
+  display: none;
+}
+
+.input_part {
+  padding: 10px 18px;
+}
+.input_part .text_info {
+  font-size: 12px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  padding: 10px;
+  display: none;
+  text-align: center;
+}
+.input_part .text_info.error {
+  display: block;
+  background-color: #f7afaf;
+  color: #500c0c;
+}
+.input_part .text_info.pending {
+  display: block;
+  background-color: #9aff81;
+  color: #1a500c;
+}
+.input_part button, .input_part input {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+}
+.input_part .input {
+  border: 1px solid #808080;
+}
+.input_part .input:focus, .input_part .input:valid {
+  border: 2px solid #3bdd25;
+}
+.input_part .btn {
+  background-color: #3bdd25;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+}
+
+.box.active .input_part {
+  display: none;
+}
+
+.division {
+  height: 1px;
+  width: 100%;
+  background: #d3d3d3;
+  margin: 15px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.division::before {
+  content: "or";
+  background: rgb(255, 255, 255);
+  padding: 0px 5px;
+  color: #d3d3d3;
+  font-size: 19px;
+}/*# sourceMappingURL=styles.css.map */

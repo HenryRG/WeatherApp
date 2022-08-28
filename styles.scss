@@ -1,0 +1,109 @@
+@import "weather";
+@import "colors";
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+//Input And Button
+.box{
+    background-color: $white;
+    width: 230px;
+    border-radius: 5px;
+    margin: 10%;
+}
+.back-app{
+    width: 100%;
+    color: $primary-color;
+    padding: 10px 8px;
+    border-bottom: 1px solid $lightblue;
+    font-weight: 500;
+    cursor: pointer;
+
+    i{
+        font-size: 0px;
+    }
+}
+.box.active .back-app i{
+    font-size: 16px;
+}
+.box.active .input_part{
+    display: none;
+}
+.input_part{
+    padding: 10px 18px;
+    // display: none;
+    
+    .text_info{
+        font-size: 12px;
+        border-radius: 5px;
+        margin-bottom: 8px;
+        padding: 10px;
+        display: none;
+        text-align: center;
+
+    } 
+    .text_info.error{
+        display: block;
+        background-color: $error-back;
+        color: $error-text;
+    }
+    .text_info.pending{
+        display: block;
+        background-color: $pending-back;
+        color: $pending-text;
+        
+    }
+    button, input{
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+        
+    }
+    .input{
+        border: 1px solid $darkgray;
+    }
+    .input:focus, .input:valid{
+        border: 2px solid $primary-color;
+    }
+        
+    .btn{
+        background-color: $primary-color;
+        color: $white;
+        border: none;
+        cursor: pointer;
+    }
+}
+.box.active .input_part{
+    display: none;
+}
+
+.division{
+    height: 1px;
+    width: 100%;
+    background: $lightgray;
+    margin: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.division::before{
+    content: "or";
+    background: $white;
+    padding: 0px 5px;
+    color: $lightgray;
+    font-size: 19px;
+}
+
+
